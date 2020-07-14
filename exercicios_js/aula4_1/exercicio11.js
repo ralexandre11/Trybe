@@ -28,4 +28,4 @@ if (salarioLiquido <= 1903.98){
 }
 salarioLiquido -= aliqIR;
 
-console.log("Salário com descontos do IR: " + salarioLiquido);
+console.log("Salário com descontos do IR: " + salarioLiquido.toFixed(2));
