@@ -59,54 +59,54 @@
     <script>
     	// COLOQUE SEU CÓDIGO AQUI
     	// 01 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
-      let myElemet = document.createElement("h1");
-      myElemet.innerText = "Exercício 5.2 - JavaScript DOM";
-      document.body.appendChild(myElemet);
+      let myElement = document.createElement("h1");
+      myElement.innerText = "Exercício 5.2 - JavaScript DOM";
+      document.body.appendChild(myElement);
 
       // 02 - Adicione a tag div com a classe main-content como filho da tag body;
-			myElemet = document.createElement("div");
-			myElemet.className = "main-content";
-			myElemet.innerText = "Div Main"
-			document.body.appendChild(myElemet);
+			myElement = document.createElement("div");
+			myElement.className = "main-content";
+			myElement.innerText = "Div Main"
+			document.body.appendChild(myElement);
 
 			// 03 - Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
-			myElemet = document.createElement("div");
-			myElemet.className = "center-content";
-			myElemet.innerText = "Div center"
-			document.querySelector(".main-content").appendChild(myElemet);
+			myElement = document.createElement("div");
+			myElement.className = "center-content";
+			myElement.innerText = "Div center"
+			document.querySelector(".main-content").appendChild(myElement);
 
 			// 04 - Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
-			myElemet = document.createElement("p");
-			myElemet.innerText = "Texto do parágrafo dentro da div center-content"
-			document.querySelector(".center-content").appendChild(myElemet);
+			myElement = document.createElement("p");
+			myElement.innerText = "Texto do parágrafo dentro da div center-content"
+			document.querySelector(".center-content").appendChild(myElement);
 
 			// 05 - Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
-			myElemet = document.createElement("div");
-			myElemet.className = "left-content";
-			myElemet.innerText = "Div left"
-			document.querySelector(".main-content").appendChild(myElemet);
+			myElement = document.createElement("div");
+			myElement.className = "left-content";
+			myElement.innerText = "Div left"
+			document.querySelector(".main-content").appendChild(myElement);
 
 			// 06 - Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
-			myElemet = document.createElement("div");
-			myElemet.className = "right-content";
-			myElemet.innerText = "Div right"
-			document.querySelector(".main-content").appendChild(myElemet);
+			myElement = document.createElement("div");
+			myElement.className = "right-content";
+			myElement.innerText = "Div right"
+			document.querySelector(".main-content").appendChild(myElement);
 
 			// 07 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do div criado no passo 5
-			myElemet = document.createElement("img");
-			myElemet.src = ("https://picsum.photos/200");
-			myElemet.className = "small-image";
-			document.querySelector(".left-content").appendChild(myElemet);
+			myElement = document.createElement("img");
+			myElement.src = ("https://picsum.photos/200");
+			myElement.className = "small-image";
+			document.querySelector(".left-content").appendChild(myElement);
 
 			// 08 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do div criado no passo 6;
-			myElemet = document.createElement("ol");
-			myElemet.className = "myList";
-			document.querySelector(".right-content").appendChild(myElemet);
+			myElement = document.createElement("ol");
+			myElement.className = "myList";
+			document.querySelector(".right-content").appendChild(myElement);
 
 			function newItem(text){
-				myElemet = document.createElement("li");
-				myElemet.innerText = text;
-				document.querySelector(".myList").appendChild(myElemet);
+				myElement = document.createElement("li");
+				myElement.innerText = text;
+				document.querySelector(".myList").appendChild(myElement);
 			}
 			newItem("un");
 			newItem("deux");
@@ -120,17 +120,16 @@
 			newItem("dix");
 
 			// 09 - Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
-      myElemet = document.createElement("h3");
-      myElemet.innerText = "Vamos aprender Francês";
-			document.querySelector(".main-content").appendChild(myElemet);
-      myElemet = document.createElement("h3");
-      myElemet.innerText = "Vamos aprender os números";
-      document.querySelector(".main-content").appendChild(myElemet);
-      myElemet = document.createElement("h3");
-      myElemet.innerText = "Números de 01 a 10";
-      document.querySelector(".main-content").appendChild(myElemet);
+      myElement = document.createElement("h3");
+      myElement.innerText = "Vamos aprender Francês";
+			document.querySelector(".main-content").appendChild(myElement);
+      myElement = document.createElement("h3");
+      myElement.innerText = "Vamos aprender os números";
+      document.querySelector(".main-content").appendChild(myElement);
+      myElement = document.createElement("h3");
+      myElement.innerText = "Números de 01 a 10";
+      document.querySelector(".main-content").appendChild(myElement);
 
-			
 
     </script>
   </body>
