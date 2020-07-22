@@ -98,6 +98,38 @@
 			myElemet.className = "small-image";
 			document.querySelector(".left-content").appendChild(myElemet);
 
+			// 08 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+			myElemet = document.createElement("ol");
+			myElemet.className = "myList";
+			document.querySelector(".right-content").appendChild(myElemet);
+
+			function newItem(text){
+				myElemet = document.createElement("li");
+				myElemet.innerText = text;
+				document.querySelector(".myList").appendChild(myElemet);
+			}
+			newItem("un");
+			newItem("deux");
+			newItem("trois");
+			newItem("quatre");
+			newItem("cinq");
+			newItem("six");
+			newItem("sept");
+			newItem("huit");
+			newItem("neuf");
+			newItem("dix");
+
+			// 09 - Adicione 3 tags h3, todas sendo filhas do div criado no passo 2.
+      myElemet = document.createElement("h3");
+      myElemet.innerText = "Vamos aprender Francês";
+			document.querySelector(".main-content").appendChild(myElemet);
+      myElemet = document.createElement("h3");
+      myElemet.innerText = "Vamos aprender os números";
+      document.querySelector(".main-content").appendChild(myElemet);
+      myElemet = document.createElement("h3");
+      myElemet.innerText = "Números de 01 a 10";
+      document.querySelector(".main-content").appendChild(myElemet);
+
 			
 
     </script>
