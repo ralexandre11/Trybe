@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Play KahooTrybe! Enter game PIN here!</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div id="main">
+		<div id="center">
+			<h1>KahooTrybe</h1>
+			<div id="game">
+				<h2>Game PIN</h2>
+			</div>
+			<div id="enter">
+				<h2>Enter</h2>
+			</div>
+
+		</div>
+		
+	</div>
+
+	<footer>
+		<div>
+			<h2>Create your own kahooTrybe for FREE atkahooTrybe.com</h2>
+			<h2>Terms | Privacy</h2>
+		</div>
+	</footer>
+
+	<script>
+		let cor1 = Math.floor(Math.random() * (70) + 150);
+		let cor2 = Math.floor(Math.random() * (70) + 150);
+		let cor3 = Math.floor(Math.random() * (70) + 150);
+		let incCor1 = true;
+		let incCor2 = true;
+		let incCor3 = true;
+		
+		let myVar = setInterval(setColor, 70);
+
+		function setColor() {
+  		let x = document.body;
+			if (incCor1) {
+				cor1 += 1;
+				if (cor1 > 230){
+					incCor1 = false;
+				}	
+			} else {
+				cor1 -= 1;
+				if (cor1 < 140){
+					incCor1 = true;
+				}	
+			}
+
+			if (incCor2) {
+				cor2 += 1;
+				if (cor2 > 230){
+					incCor2 = false;
+				}	
+			} else {
+				cor2 -= 1;
+				if (cor2 < 140){
+					incCor2 = true;
+				}	
+			}
+
+			if (incCor3) {
+				cor3 += 1;
+				if (cor3 > 230){
+					incCor3 = false;
+				}	
+			} else {
+				cor3 -= 1;
+				if (cor3 < 140){
+					incCor3 = true;
+				}	
+			}
+
+			x.style.backgroundColor = 'rgb(' + cor1 + ',' + cor2 + ',' + cor3 + ')';
+		}
+
+
+
+	</script>
+
+</body>
+
+</html>
