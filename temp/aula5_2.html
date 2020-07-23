@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>    
+      <script>
+        // 01 Acesse o elemento elementoOndeVoceEsta.
+        let myElement = document.getElementById("elementoOndeVoceEsta");
+
+        // 02 Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        myElement.parentNode.style.backgroundColor = "rgb(151 , 151, 51)";
+
+        // 03 Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+        document.getElementById("primeiroFilhoDoFilho").innerText = "Texto do Primeiro Filho do Filho";
+
+        // 04 Acesse o primeiroFilho a partir de pai
+        let myElement2 = document.getElementById("pai").childNodes[0];
+        // console.log(myElement2);
+
+        // 05 Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        let myElement3 = document.getElementById("elementoOndeVoceEsta").previousElementSibling;
+        // console.log(myElement3);
+
+        // 06 Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        let myElement4 = document.getElementById("elementoOndeVoceEsta");
+        // console.log(myElement4.parentNode.innerText);
+
+        // 07 Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        let myElement5 = document.getElementById("elementoOndeVoceEsta").nextElementSibling;
+        // console.log(myElement5);
+
+        // 08 Agora acesse o terceiroFilho a partir de pai
+        let myElement6 = document.getElementById("pai").childNodes[5];
+        // console.log(myElement6);
+
+        // 08 Crie um irmão para elementoOndeVoceEsta.
+        let myElement7 = document.getElementById("elementoOndeVoceEsta");
+        myElement7.parentNode.createElement('div');
+
+
+        // console.log(myElement.innerHtml);
+        // myElement.style.backgroundcolor = "red";
+      </script>
+</body>
+</html>
