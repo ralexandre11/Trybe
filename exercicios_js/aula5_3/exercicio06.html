@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="exercicio06.css" />
+	<title>A Creepy Story</title>
+</head>
+
+<body>
+	<h1>The Basement</h1>
+	<p id="textStory">I knew I shouldn't go there, in that dank, cold little place. But I wanted to find my friend, and he was
+		hiding in the basement.</p>
+
+	<button id="btnMood">Get In The Mood</button>
+	<div class="textEntry">Type your name here, if you dare: <input type="text" id="name" autocomplete="off"></div>
+	<button id="btnDontClick">Please, Please Don't Click Me</button>
+	<button id="btnStory">Tell Me What Happened!</button>
+	<audio id="audio" src="http://reboot-me.com/ouch.mp3" type="audio/mpeg"></audio>
+
+	<script>
+		let personName = "";
+		
+		function complainMessage() {
+			alert("I told you not to do that " + personName);
+		}
+
+		function typeAndScream() {
+			document.getElementById("audio").play();
+			personName = document.getElementById("name").value;
+		}
+
+		function goDark() {
+			if (body.className == "") {
+				body.className = "dark";
+			} else {
+				body.className = "";
+			}
+		}
+
+		function finishTheStory() {
+			const mytextStory = document.querySelector("#textStory");
+			mytextStory.innerText = "So I carefully searched the damp dungeon. There you are! I grinned a smile with all 98 of my gleaming teeth. Dinner time!";
+		}
+
+		const myImput = document.querySelector("#name");
+		myImput.addEventListener("keyup", typeAndScream);
+
+		const mybtnDontClick = document.querySelector("#btnDontClick");
+		mybtnDontClick.addEventListener("click", complainMessage);
+
+		const mybtnStory = document.querySelector("#btnStory");
+		mybtnStory.addEventListener("click", finishTheStory);
+
+		const body = document.getElementsByTagName("body")[0];
+		const mybtnMood = document.querySelector("#btnMood");
+		mybtnMood.addEventListener("click", goDark);
+
+	</script>
+
+</body>
+
+</html>
