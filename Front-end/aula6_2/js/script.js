@@ -1,5 +1,37 @@
 window.onload = function() {
 
+  var picker = new Pikaday({
+    field: document.getElementById('datepicker'),
+    onSelect: function(date) {
+        console.log(date);
+    }
+  });
+
+  new window.JustValidate('.myForm', {
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      email: {
+        required: 'O campo email é obrigatório',
+        email: 'O email digitado não é válido'
+      },
+    },
+
+    submitHandler: function (form, values) {
+      let myCV = document.getElementById("myCV");
+
+      let item = document.createElement("p");
+      item.appendChild(document.createTextNode(values["tipo"]));
+      myCV.appendChild(item);
+    },
+  });
+
+
+
   carregaUF();
 
   const btnOK = document.getElementById("btnOK");
