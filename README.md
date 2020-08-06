@@ -1,1 +1,1 @@
-Aqui estão tudo o que foi estudado na Trybe.
+Este diretório estão todos os exercícios feitos nas aulas da Trybe.
