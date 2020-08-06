@@ -3,33 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" href="styles.css">
+  
   <title>Aula 6.2 - Formuário com Bootstrap</title>
   
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"> -->
+  <!-- Pikaday CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/pikaday.css">
+
+  <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
   <div class="container">
 
     <header>
-      <h1>Formulário Aula 6.1</h1>
+      <h1>Formulário Aula 6.2</h1>
     </header>
 
-    <form action="" method="GET">
+    <form class="myForm" action="" method="GET">
       <div class="form-group">
         <label for="nome">Nome Completo</label>
         <input class="form-control" type="text" id="nome" name="nome" maxlength="40" required>
       </div>
       <div class="form-group">
         <label for="email">E-mail</label>
-        <input class="form-control" type="text" id="email" name="email" maxlength="40" placeholder="name@example.com" required>
+        <input class="form-control" type="text" data-validate-field="email" id="email" name="email" maxlength="40" placeholder="name@example.com" required>
       </div>
       <div class="form-group">
         <label for="cpf">CPF</label>
-        <input class="form-control" type="text" id="cpf" name="cpf" maxlength="11" required>
+        <input class="form-control" type="text" id="cpf" name="cpf" maxlength="14" required>
       </div>
       <div class="form-group">
         <label for="endereco">Endereço</label>
@@ -72,21 +75,31 @@
         <input class="form-control" type="text" id="desCargo" name="desCargo" maxlength="500" required>
       </div>
       <div class="form-group">
-        <label for="dataIni">Data Início</label>
-        <input class="form-control" type="text" id="dataIni" name="dataIni" maxlength="10" required>
+        <label for="datepicker">Data Início</label>
+        <input class="form-control" type="text" id="datepicker" name="datepicker" maxlength="10" required>
       </div>
       <button class="btn btn-primary" type="submit" id="btnOK">OK</button>
-      <button type="reset" value="Reset">Limpar</button>
+      <button class="btn btn-danger" type="reset" value="Reset">Limpar</button>
     </form>
   </div>
+  <div class="container" id="myCV">
+    <h2>Meu Currículo</h2>
+  </div>
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+
+  <!-- Pikaday JavaScript -->
+  <script src="/js/pikaday.js"></script>
+
+  <!-- Just-Validate JavaScript -->
+  <script src="/js/justValidate.js"></script>
+
+  <!-- Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>     -->
+
+  <!-- Meus arquivos JavaScript -->
+  <script src="/js/script.js"></script>
 
 </body>
 </html>
