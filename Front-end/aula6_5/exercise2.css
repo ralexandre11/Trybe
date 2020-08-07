@@ -2,6 +2,121 @@ html {
   box-sizing: border-box;
 }
 
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body ul li {
+  list-style-type: none;
+}
+
+header {
+  padding: 5px 2px;
+  margin: 0;
+  background-color: rgb(12, 122, 80);
+}
+
+header p {
+  color: rgb(209, 228, 228);
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+  padding: 0 10px;
+}
+
+header nav ul li {
+  margin: 5px 3px;
+  font-size: 1.2em;
+  background-color: rgb(140, 189, 170);
+  border-radius: 4px;
+  padding: 2px 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+main aside, main article {
+  text-align: justify;
+}
+
+main aside h2 {
+  margin: 10px 5px 5px 5px ;
+}
+
+main aside ul {
+  font-size: 1.1em ;
+}
+
+main article h1 {
+  margin: 30px 5px 5px 5px ;
+  font-size: 1.5em;
+}
+
+main article p {
+  margin: 10px 5px 5px 5px ;
+  font-size: 1.2em;
+}
+
+footer {
+  margin: 0;
+  padding: 6px;
+  background-color: rgb(12, 122, 80);
+  color: rgb(209 , 228 , 228);
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 1.1em;
+  margin: 5px 0px;
+  padding: 6px;
+}
+
+footer #footer-title{
+  text-align: center;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 3px 6px;
+}
+
+footer #footer-details{
+  text-align: justify;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 10px 6px 3px 6px;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px 5px;
+    justify-content: center;
+  }
+
+  main article {
+    width: 60%;
+    margin-right: 20px;
+
+  }
+
+  main div {
+    margin-top: 35px;
+  }
+
+  footer #footer-details{
+    text-align: center;
+    font-size: 1em;
+    margin: 5px 30px
+  }
 }
