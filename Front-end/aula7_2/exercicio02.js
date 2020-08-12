@@ -38,3 +38,31 @@ console.table(listValues(lesson2));
 // 05 Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
 const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 console.log(Object.entries(allLessons));
+
+// 06 Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas.
+const countStudents = (myObject) => {
+  let total = 0;
+  const myKeys = Object.keys(myObject);
+  for (let key in myKeys) {
+    total += myObject[myKeys[key]].numeroEstudantes; 
+  }
+  return total;
+} 
+console.log(countStudents(allLessons));
+
+// 07 Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+const getValueByNumber = (myObject, index) => Object.values(myObject)[index];
+console.log(getValueByNumber(lesson2, 2));
+
+// 08 Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave. Exemplo:
+const verifyPair = (myObject, myKey, myValue) => {
+  let itsOK = false;
+  if (myObject[myKey] === myValue) {
+    itsOK = true;
+  }
+  return itsOK;
+}
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
