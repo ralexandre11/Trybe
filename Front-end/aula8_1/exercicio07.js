@@ -71,7 +71,7 @@ function authorUnique() {
   books.forEach(item => {
     let year = item.author.birthYear;
     let id = item.id;
-    if (books.some(findYear => (findYear.author.birthYear === year) && (findYear.id !== id))) 
+    if (books.some(itemSome => (itemSome.author.birthYear === year) && (itemSome.id !== id))) 
       isUnique = false;
   });
   return isUnique;
