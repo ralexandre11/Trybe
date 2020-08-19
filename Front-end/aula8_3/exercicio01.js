@@ -7,7 +7,6 @@ const arrays = [
     [4, 5, 6]
 ];
 
-
 function flatten() {
   return arrays.reduce((myArray, array) => myArray.concat(array));
 }
