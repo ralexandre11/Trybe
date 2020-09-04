@@ -7,7 +7,7 @@ const uppercase = (str, callback) => {
 describe('Test string Uppercase', () => {
   it('if string is uppercase', done => {
     uppercase('teste', (strUpperCase) => {
-      expect(strUpperCase).toBe('TESTe');
+      expect(strUpperCase).toBe('TESTE');
       done();
     });
   });
