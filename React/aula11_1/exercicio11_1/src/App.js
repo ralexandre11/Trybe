@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 
 const task = (tasks) => {
-  return (tasks.map((item) => 
-    <li>{item}</li>
+  const myList = (tasks.map((item) => 
+    <li>{item}</li> 
   ));
+  return myList;
 }
 
 function App() {
