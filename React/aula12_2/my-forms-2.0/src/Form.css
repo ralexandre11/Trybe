@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fildset1 {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.uppercar {
+  text-transform: uppercase;
+}
