@@ -196,6 +196,10 @@ class Form extends Component {
   }
 }
 
+// Recuperar o Store
+// mapStateToProps
+
+// Atualizar o Store
 const mapDispatchToProps = dispatch => ({
   addUserForm: user => dispatch(updateForm(user))});
 

@@ -9,4 +9,10 @@ function formReducer(state = INITIAL_STATE, action) {
   }
 }
 
+// {
+//   {name: 'Ricardo', email: 'ric@ig.com'}
+//   {name: 'Cristiano', email: 'ric@ig.com'}
+//   {name:}
+// }
+
 export default formReducer;
